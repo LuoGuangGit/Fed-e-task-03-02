@@ -36,4 +36,3 @@
   * 首先把模板字符串转换成 AST tree 也就是抽象语法树
   * 然后对抽象语法树进行优化：标记静态语法树中的所有静态根节点，静态根节点不需要每次被重绘，patch 过程中会跳过静态根节点，最后 AST 对象转换成字符串形式的 js 代码
 * 当 compile 执行完毕后会编译的入口函数 compileToFunctions 会继续把上一步中生成的字符串形式的 js 代码通过调用 createFunction 转换成函数形式，当 render 和 staticRenderFns 创建完毕，最终它们都会被挂载到 Vue 实例的 options 选项对应的属性上
-* 
